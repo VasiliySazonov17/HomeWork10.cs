@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/*
+Задача 64: Task64
+Задача 66: Task66
+Задача 68: Task68
+*/
