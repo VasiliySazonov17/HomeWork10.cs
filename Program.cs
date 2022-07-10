@@ -7,23 +7,22 @@
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30
 */
-Console.Write("Inpit m: ");
+Console.Write("Inpit number m: ");
 int m = int.Parse(Console.ReadLine());
-Console.Write("Inpit n: ");
+Console.Write("Inpit number n: ");
 int n = int.Parse(Console.ReadLine());
-Console.Write($"{SumNumberBetween(m, n)}");
+int sum = 0;
+Console.Write(SumNumberBetween(m, n, sum));
 
-
-int SumNumberBetween(int m, int n)
+int SumNumberBetween(int m, int n, int sum)
 {
-    int sum = 0;
     if (m == n)
     {
         return m;
     }
     else
     {
-        sum += SumNumberBetween(m + 1, n);
+        sum = m + SumNumberBetween(m + 1, n, sum);
     }
-    return m;
+    return sum;
 }
