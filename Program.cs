@@ -11,18 +11,11 @@ Console.Write("Inpit number m: ");
 int m = int.Parse(Console.ReadLine());
 Console.Write("Inpit number n: ");
 int n = int.Parse(Console.ReadLine());
-int sum = 0;
-Console.Write(SumNumberBetween(m, n, sum));
+Console.Write(SumNumberBetween(m, n));
 
-int SumNumberBetween(int m, int n, int sum)
+int SumNumberBetween(int m, int n)
 {
-    if (m == n)
-    {
-        return m;
-    }
+    if (m == n) return m;
     else
-    {
-        sum = m + SumNumberBetween(m + 1, n, sum);
-    }
-    return sum;
+        return m += SumNumberBetween(m + 1, n);
 }
